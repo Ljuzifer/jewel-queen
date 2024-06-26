@@ -1,0 +1,104 @@
+.reviews {
+  position: relative;
+  padding: 50px 0px;
+  z-index: 0;
+}
+.swiper-wrapper {
+  display: flex;
+  width: 288px;
+  height: 182px;
+
+  @include media(desktop) {
+    width: 1200px;
+    height: 208px;
+  }
+}
+
+.swiper-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.reviewsTitle {
+  padding-bottom: 24px;
+  text-align: center;
+
+  @include media(desktop) {
+    font-size: 64px;
+  }
+}
+
+.cardsTitleRev {
+  font-family: $_font-open-sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.79px;
+  color: $_main_text_color;
+
+  @include media(desktop) {
+    font-size: 24px;
+    line-height: 32.68px;
+  }
+}
+
+.cardsTextRev {
+  font-family: $_font-open-sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: $_main_text_color;
+
+  @include media(desktop) {
+    font-size: 24px;
+    line-height: 35px;
+  }
+}
+.prevnext {
+  padding-top: 24px;
+  display: flex;
+  gap: 104px;
+  justify-content: center;
+}
+
+.swiper-prev,
+.swiper-next {
+  cursor: pointer;
+  z-index: 5;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.swiper-prev.inactive,
+.swiper-next.inactive {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.swiper-prev img,
+.swiper-next img {
+  width: 50px;
+  height: 50px;
+
+  @include media(desktop) {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+.cardsRev {
+  height: 150px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 8px;
+  background: $_background_gradient;
+
+  @include media(desktop) {
+    gap: 24px;
+    height: 162px;
+    width: 523px;
+    padding: 24px;
+  }
+}
